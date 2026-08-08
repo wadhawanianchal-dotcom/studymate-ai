@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# StudyMate AI
 
-## Getting Started
+StudyMate AI is an AI-powered study assistant built with Next.js and Google Gemini AI. It helps students understand academic concepts, ask study-related questions, generate quizzes, and summarize study notes.
 
-First, run the development server:
+## Live Application
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://studymate-ai-virid.vercel.app/
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## GitHub Repository
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+https://github.com/wadhawanianchal-dotcom/studymate-ai
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Features
 
-## Learn More
+- AI-powered study chat
+- Simple explanations of academic concepts
+- AI-generated quizzes
+- Study notes assistance
+- Student-focused interface
+- Error handling for failed AI requests
+- Responsive web interface
+- Google Gemini AI integration
 
-To learn more about Next.js, take a look at the following resources:
+## Technology Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Next.js
+- React
+- JavaScript
+- Google Gemini AI
+- @google/genai
+- Vitest
+- React Testing Library
+- HTML/CSS
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## AI Integration
 
-## Deploy on Vercel
+StudyMate AI uses Google Gemini AI through the `@google/genai` package.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+The application sends the user's study question to a Next.js API route. The API route sends the request to Gemini and returns the generated response to the frontend.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The Gemini API key is stored using an environment variable and is not exposed directly in the frontend.
+
+## Application Structure
+
+```text
+src/
+├── app/
+│   ├── api/
+│   │   ├── chat/
+│   │   ├── notes/
+│   │   └── quiz/
+│   ├── chat/
+│   ├── notes/
+│   ├── quiz/
+│   └── page.js
+│
+├── components/
+│   ├── ChatBox.js
+│   ├── Footer.js
+│   ├── Navbar.js
+│   ├── NotesBox.js
+│   └── QuizBox.js
+│
+└── ...
