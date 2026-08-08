@@ -1,0 +1,76 @@
+STUDYMATE AI — DEPLOYMENT CHECKLIST
+
+Project: StudyMate AI
+Technology: Next.js, React, Gemini AI
+Repository: GitHub
+Deployment: Vercel
+
+PRE-DEPLOYMENT CHECKS
+
+☑ Production build configured
+☑ Environment variable configured for Gemini API
+☑ AI Chat API implemented
+☑ Quiz generation API implemented
+☑ Error handling implemented
+☑ Automated test configured and passing
+☑ README documentation completed
+
+FUNCTIONAL PRODUCTION CHECKS
+
+☑ Home page loads successfully
+☑ AI Chat works in production
+☑ AI Chat successfully answered a study question
+☑ Quiz generation works in production
+☑ Quiz generates 5 questions with 4 options
+☑ Notes summarization works in production
+
+QUALITY CHECKS
+
+☑ Lighthouse audit completed
+☑ Performance score: 90
+☑ Accessibility score: 100
+☑ Best Practices score: 100
+☑ SEO score: 100
+☑ Accessibility requirements reviewed
+☑ Automated test passes
+
+TESTING EVIDENCE
+
+Test framework: Vitest + Testing Library
+
+Result:
+1 Test File Passed
+1 Test Passed
+
+Test:
+"renders the StudyMate AI greeting and input"
+
+FAILURE HANDLING
+
+The application uses try/catch error handling in the AI API routes.
+If an AI request fails, the application returns an error response instead
+of crashing silently.
+
+The chat interface also displays a user-friendly failure message when
+the AI request cannot be completed.
+
+ROLLBACK PLAN
+
+If a production deployment introduces a problem, the previous working
+Git commit can be redeployed through Vercel. The GitHub main branch is
+used as the source of the production code.
+
+MONITORING
+
+Production deployment status and errors can be reviewed through Vercel
+deployment logs.
+
+FINAL SIGN-OFF
+
+☑ Application is functional
+☑ AI integration is functional
+☑ Tests pass
+☑ Documentation is available
+☑ Production deployment has been verified
+
+Status: READY FOR CAPSTONE REVIEW
