@@ -28,4 +28,4 @@ I added a Vitest test for the ChatBox component. The test verifies that the Stud
 The test passes successfully using:
 
 ```bash
-npm test
+npm test 
