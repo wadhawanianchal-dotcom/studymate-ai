@@ -1,6 +1,6 @@
 # 📘 StudyMate AI
 
-StudyMate AI is an AI-powered study assistant built with **Next.js, React, and Google Gemini AI**. It helps students understand academic topics through AI-powered explanations, generate practice quizzes, and organize study notes through a simple and responsive interface.
+StudyMate AI is an AI-powered study assistant built with **Next.js, React, and Google Gemini AI**. It helps students understand academic topics through AI-powered explanations, generate practice quizzes, and simplify study notes through a simple and responsive web interface.
 
 ## 🚀 Live Application
 
@@ -14,7 +14,7 @@ https://github.com/wadhawanianchal-dotcom/studymate-ai
 
 ## 📌 Project Brief
 
-StudyMate AI helps students get quick, easy-to-understand explanations and practice material for academic topics. It is designed for university and college students who need quick clarification while studying, want to practice a topic through quizzes, or want to simplify study notes. I chose this idea because students often need immediate academic support while studying, and an AI-powered assistant can provide personalized explanations and learning material through one accessible interface.
+StudyMate AI helps university and college students get quick, easy-to-understand explanations and personalized study material for academic topics. Users can ask questions, generate practice quizzes, and simplify study notes through one accessible interface. I chose this idea because students often need immediate academic support while studying, and AI can provide personalized explanations and learning material based on the student's input.
 
 ---
 
@@ -27,7 +27,7 @@ StudyMate AI provides an interactive study environment where users can:
 * Ask academic questions and receive AI-generated explanations
 * Generate quizzes for different topics
 * Simplify study notes
-* Access study features from a responsive web interface
+* Access study features through a responsive web interface
 
 ### Target Users
 
@@ -38,9 +38,9 @@ StudyMate AI provides an interactive study environment where users can:
 
 ---
 
-## ✨ Features
+# ✨ Features
 
-### 🤖 AI Study Chat
+## 🤖 AI Study Chat
 
 Students can ask study-related questions and receive AI-powered explanations, examples, and solutions.
 
@@ -62,7 +62,7 @@ Chat Interface
 
 ---
 
-### 📝 AI Quiz Generator
+## 📝 AI Quiz Generator
 
 Users can enter a topic and generate an AI-powered quiz.
 
@@ -77,7 +77,7 @@ The quiz API was also tested during development and successfully returned a `200
 
 ---
 
-### 📚 Study Notes
+## 📚 AI Study Notes
 
 The Notes section provides an AI-powered way to work with study material and generate simplified summaries.
 
@@ -95,30 +95,29 @@ Simplified Summary
 
 ---
 
-### 📱 Responsive Interface
+## 📱 Responsive Interface
 
 The application is designed to work across different screen sizes, including desktop and mobile devices.
 
 ---
 
-### 🛡️ Error Handling
+## 🛡️ Error Handling
 
 The application includes error handling for failed AI requests.
 
-If an AI request cannot be completed, the interface can display an error message instead of leaving the user without feedback.
+If an AI request cannot be completed, the interface displays an error message instead of leaving the user without feedback.
 
 For example:
 
 ```text
-Sorry, I couldn't process your question right now.
-Please try again.
+❌ Failed to connect to Gemini.
 ```
 
 The application also handles temporary Gemini API availability problems.
 
 ---
 
-## 🧠 AI Integration
+# 🧠 AI Integration
 
 StudyMate AI uses Google's Gemini AI through the:
 
@@ -128,9 +127,9 @@ StudyMate AI uses Google's Gemini AI through the:
 
 package.
 
-The application uses AI for three main study workflows:
+AI is integrated into three main study workflows.
 
-### 1. AI Chat
+## 1. AI Chat
 
 The user submits a study question to the Chat interface.
 
@@ -146,11 +145,11 @@ Generated explanation
 Chat UI
 ```
 
-The AI prompt instructs Gemini to behave as a helpful study assistant and provide explanations suitable for learning.
+The AI prompt is designed to make Gemini behave as a helpful study assistant and provide explanations suitable for learning.
 
 ---
 
-### 2. AI Quiz Generation
+## 2. AI Quiz Generation
 
 The Quiz feature sends the selected topic to the Gemini API.
 
@@ -166,11 +165,11 @@ Gemini API
 Quiz interface
 ```
 
-The AI is used to generate questions and answer options instead of relying on hard-coded quiz content.
+The AI generates questions and answer options dynamically instead of relying only on hard-coded quiz content.
 
 ---
 
-### 3. AI Study Notes
+## 3. AI Study Notes
 
 The Notes feature sends study material to the Gemini API and requests a simplified summary.
 
@@ -188,45 +187,46 @@ Notes interface
 
 ---
 
-## 🏗️ Technology Stack
+# 🏗️ Technology Stack
 
-### Frontend
+## Frontend
 
 * React
 * Next.js
 * JavaScript
 * HTML
-* CSS / Tailwind CSS
+* CSS
+* Tailwind CSS
 
-### Backend / API
+## Backend / API
 
 * Next.js App Router API Routes
 * Google Gemini API
 
-### AI
+## AI
 
 * Google Gemini
 * `@google/genai`
 
-### Testing
+## Testing
 
 * Vitest
 * React Testing Library
 * jsdom
 * `@vitest/coverage-v8`
 
-### Deployment
+## Deployment
 
 * Vercel
 
-### Version Control
+## Version Control
 
 * Git
 * GitHub
 
 ---
 
-## 📂 Project Structure
+# 📂 Project Structure
 
 The application uses the Next.js App Router structure.
 
@@ -261,29 +261,29 @@ studymate-ai/
 
 ### Main Components
 
-#### `src/app/`
+### `src/app/`
 
 Contains the application's pages and API routes.
 
-#### `src/app/api/chat/`
+### `src/app/api/chat/`
 
 Handles AI chat requests.
 
-#### `src/app/api/quiz/`
+### `src/app/api/quiz/`
 
 Handles AI quiz generation.
 
-#### `src/app/api/notes/`
+### `src/app/api/notes/`
 
 Handles AI-powered note summarization.
 
-#### `src/components/`
+### `src/components/`
 
 Contains reusable React components.
 
-#### `ChatBox.test.jsx`
+### `ChatBox.test.jsx`
 
-Contains the automated test for the StudyMate AI chat component.
+Contains automated tests for the main ChatBox component and its user interactions.
 
 ---
 
@@ -291,112 +291,127 @@ Contains the automated test for the StudyMate AI chat component.
 
 Testing was implemented using **Vitest and React Testing Library**.
 
-The current test suite includes a test for the main ChatBox component.
+The ChatBox test suite covers the main user interactions and error handling.
 
-### Test Command
+## Test Command
 
 ```bash
 npm test -- --coverage
 ```
 
-### Current Test Result
+## Current Test Result
 
 ```text
 Test Files  1 passed (1)
-Tests       1 passed (1)
-
-✓ src/components/ChatBox.test.jsx
-  ✓ renders the StudyMate AI greeting and input
+Tests       5 passed (5)
 ```
 
-### Coverage Result
+The test suite verifies:
+
+* StudyMate AI greeting and input rendering
+* Sending a message and displaying the AI response
+* API connection failure handling
+* Preventing empty messages from being sent
+* Sending a message using the Enter key
+
+## Coverage Result
 
 ```text
-All files
-
-Statements: 26.08%
-Branches:   30%
-Functions:  25%
-Lines:      33.33%
+All files   | 100% Statements | 90% Branches | 100% Functions | 100% Lines
+ChatBox.jsx | 100% Statements | 90% Branches | 100% Functions | 100% Lines
 ```
 
-Current coverage output:
+The final test run achieved:
 
-```text
-------------|---------|----------|---------|---------|
-All files   | 26.08   | 30       | 25      | 33.33   |
-```
+* **100% statement coverage**
+* **90% branch coverage**
+* **100% function coverage**
+* **100% line coverage**
 
-### Test Covered
-
-The current automated test verifies that the ChatBox component:
-
-* Renders the StudyMate AI greeting
-* Renders the user input
-* Loads correctly in the testing environment
-
-### Coverage Status
-
-The current coverage is **below the FlyRank target of 50% component coverage**.
-
-This is an area for future improvement by adding tests for:
-
-* Chat submission
-* Loading state
-* Error state
-* Quiz functionality
-* Notes functionality
-* API failure handling
-
-The existing test nevertheless provides automated evidence that the main chat component renders correctly.
+This exceeds the capstone requirement of at least **50% component coverage**.
 
 ---
 
-# ⚡ Performance & Accessibility
+# ♿ Accessibility Audit
 
-Performance and accessibility were considered during development and deployment.
+Accessibility was tested using **axe DevTools / axe-core 4.12.1** against the application.
 
-### Lighthouse
+## Final axe Result
 
-The application was evaluated using Lighthouse during development.
+```text
+Test URL:
+https://studymate-ai-virid.vercel.app/
 
-The audit was used to identify performance and accessibility issues and guide improvements.
+Total Issues: 0
+Automatic Issues: 0
+Guided Issues: 0
+Manual Issues: 0
+Critical: 0
+Serious: 0
+Moderate: 0
+Minor: 0
 
-The main areas checked were:
+WCAG 2.1 AA
+Total Issues: 0
+```
+
+The final local accessibility audit also reported:
+
+```text
+Total Issues: 0
+```
+
+### Accessibility Improvement
+
+The initial audit identified a serious WCAG 2.1 AA color-contrast issue in the Home navigation link.
+
+The original yellow text had insufficient contrast against the white background:
+
+```text
+Foreground: #FBBF24
+Background: #FFFFFF
+Contrast: 1.66:1
+Required: 4.5:1
+```
+
+The navigation color was changed to a darker accessible color:
+
+```css
+a[href="/"] {
+  color: #4338ca !important;
+}
+```
+
+After the change, the axe DevTools audit reported **0 issues**.
+
+---
+
+# ⚡ Performance & Lighthouse Audit
+
+The application was evaluated using **Google Lighthouse**.
+
+The audit covered:
 
 * Performance
 * Accessibility
 * Best Practices
 * SEO
 
-### Accessibility
+Lighthouse was used during development to identify areas that could be improved before final deployment.
 
-Accessibility was considered using WCAG principles.
-
-Important areas include:
-
-* Readable text
-* Clear interface structure
-* Keyboard-friendly controls
-* Responsive layout
-* Appropriate form controls
-* Visible error feedback
-
-### Improvement Process
-
-Accessibility and performance audits were used to identify issues and improve the application before deployment.
+The application was also tested on the production deployment to verify that the deployed version was functional.
 
 ---
 
 # 🚀 Deployment
 
-The production application is deployed using Vercel.
+The production application is deployed using **Vercel**.
 
-### Production URL
+## Production URL
 
 https://studymate-ai-virid.vercel.app/
 
-### Deployment Flow
+## Deployment Flow
 
 ```text
 Local Development
@@ -408,7 +423,7 @@ Vercel
 Production Deployment
 ```
 
-The application can be redeployed from the GitHub repository if a production rollback or recovery is required.
+The project is connected to GitHub so changes pushed to the `main` branch can be deployed through Vercel.
 
 ---
 
@@ -416,7 +431,7 @@ The application can be redeployed from the GitHub repository if a production rol
 
 AI services depend on external API availability, so AI features can temporarily fail even when the frontend application itself is working correctly.
 
-During local testing, Gemini returned a `503 UNAVAILABLE` response for some Chat and Notes requests because the selected model was experiencing high demand.
+During development, Gemini returned a `503 UNAVAILABLE` response for some Chat and Notes requests because the selected model was experiencing high demand.
 
 Example:
 
@@ -429,13 +444,13 @@ Spikes in demand are usually temporary.
 
 The application handles these failures by returning an error response rather than crashing the entire frontend.
 
-### Current Limitations
+## Current Limitations
 
 * AI responses depend on Gemini API availability.
 * Temporary Gemini service errors can prevent Chat or Notes generation.
-* Automated test coverage is currently below the desired 50% target.
 * The application does not currently provide a complete offline AI fallback.
 * AI-generated content may require user verification for academic accuracy.
+* The application currently does not include user authentication or persistent user accounts.
 
 ---
 
@@ -450,13 +465,13 @@ If a production deployment introduces a breaking change:
 5. Allow Vercel to create a new deployment.
 6. Verify the production application after deployment.
 
-For a larger production issue, the previous stable Vercel deployment can also be used as the recovery point.
+For a larger production issue, a previous stable Vercel deployment can be used as the recovery point.
 
 ---
 
 # 📋 Deployment Checklist
 
-Before production deployment, the following areas were checked:
+Before final production submission, the following areas were checked:
 
 * [x] Application builds successfully
 * [x] Production deployment created
@@ -464,12 +479,14 @@ Before production deployment, the following areas were checked:
 * [x] Main pages accessible
 * [x] AI API routes implemented
 * [x] Error handling implemented
-* [x] Automated test implemented
+* [x] Automated tests implemented
+* [x] All automated tests passing
+* [x] Test coverage above 50%
 * [x] Lighthouse audit performed
-* [x] Accessibility considered
+* [x] Accessibility audit performed
+* [x] WCAG 2.1 AA automated accessibility issues resolved
 * [x] GitHub repository available
-* [ ] Automated coverage at 50%+ components
-* [ ] Full offline AI fallback
+* [x] Deployment rollback process documented
 
 ---
 
@@ -533,13 +550,17 @@ Run tests with coverage:
 npm test -- --coverage
 ```
 
-The coverage report is generated by Vitest using `@vitest/coverage-v8`.
+Coverage is generated by Vitest using:
+
+```text
+@vitest/coverage-v8
+```
 
 ---
 
 # 🧩 Application Pages
 
-### Home
+## Home
 
 ```text
 /
@@ -547,7 +568,7 @@ The coverage report is generated by Vitest using `@vitest/coverage-v8`.
 
 Provides the main introduction to StudyMate AI.
 
-### AI Chat
+## AI Chat
 
 ```text
 /chat
@@ -555,7 +576,7 @@ Provides the main introduction to StudyMate AI.
 
 Allows students to ask AI-powered study questions.
 
-### Quiz
+## Quiz
 
 ```text
 /quiz
@@ -563,7 +584,7 @@ Allows students to ask AI-powered study questions.
 
 Allows students to generate AI-powered quizzes.
 
-### Notes
+## Notes
 
 ```text
 /notes
@@ -571,7 +592,7 @@ Allows students to generate AI-powered quizzes.
 
 Provides AI-powered study note functionality.
 
-### About
+## About
 
 ```text
 /about
@@ -603,23 +624,23 @@ StudyMate AI uses AI for actual learning workflows:
 
 These workflows directly address common study tasks and allow the application to generate personalized learning material based on user input.
 
+The AI is therefore a functional capability inside the product rather than a separate feature added only for demonstration.
+
 ---
 
 # 🔮 Future Improvements
 
 Possible future improvements include:
 
-* Increase automated test coverage to at least 50%+
-* Add tests for API failure scenarios
 * Add stronger structured validation for AI responses
 * Improve AI response reliability
 * Add user authentication
 * Save user quizzes and notes
 * Add study progress tracking
-* Add more accessibility testing
 * Add streaming AI responses
 * Add multiple AI model fallback support
 * Add stronger academic-content validation
+* Expand automated tests to additional components and API routes
 
 ---
 
@@ -627,11 +648,13 @@ Possible future improvements include:
 
 Building StudyMate AI demonstrated that integrating an AI model into a frontend application involves more than simply sending a prompt and displaying the response. One of the challenging parts was handling external AI service failures because the application can be functioning correctly while the model service is temporarily unavailable.
 
-Another important lesson was that testing and production readiness require attention beyond the main happy path. The application needed error states and automated testing so that failures could be detected and communicated instead of leaving users with an unexplained broken interface.
+Another important lesson was that testing and production readiness require attention beyond the main happy path. The ChatBox test suite was expanded to cover successful requests, failed requests, empty input, and keyboard interaction. This helped verify that the main AI interaction behaves correctly under different conditions.
 
-The project also showed the importance of accessibility and performance audits. Building a feature that works is only part of shipping a frontend application; the application also needs to be usable, testable, deployable, and understandable to another developer.
+The accessibility audit also exposed a real color-contrast problem in the navigation. Fixing the issue and running the audit again showed that accessibility needs to be tested rather than assumed.
 
-If I continued developing StudyMate AI, I would prioritize increasing automated test coverage, adding stronger AI response validation, and improving reliability when the primary AI model is temporarily unavailable.
+The project also demonstrated that performance, accessibility, testing, deployment, and error handling are all part of shipping a frontend application. Building a feature that works is only one part of production readiness.
+
+If I continued developing StudyMate AI, I would prioritize stronger AI response validation, additional API and component tests, and improved reliability when the primary AI model is temporarily unavailable.
 
 The biggest lesson was that an AI-powered feature is only useful when the AI solves a real user problem. The AI itself is not the product; it is a capability inside the product.
 
