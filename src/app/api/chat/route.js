@@ -8,27 +8,26 @@ export async function POST(request) {
   try {
     const { message } = await request.json();
 
-    // Validate empty input on the server
     if (!message || !message.trim()) {
       return Response.json(
         {
           reply: "Please enter a study-related question.",
         },
-        {
-          status: 400,
-        }
+        { status: 400 }
       );
     }
 
     const response = await ai.models.generateContent({
-      model: "gemini-flash-latest",
+      model: "gemini-3.6-flash",
       contents: `
 You are StudyMate AI, a helpful study assistant.
 
 Answer the student's question clearly and accurately.
 Explain difficult concepts in simple language.
-Use examples when they help understanding.
-If the question is unrelated to studying, politely explain that you are designed primarily for study-related questions.
+Use examples when helpful.
+
+If the question is unrelated to studying, politely explain that
+you are designed primarily for study-related questions.
 
 Student question:
 ${message.trim()}
@@ -43,11 +42,10 @@ ${message.trim()}
 
     return Response.json(
       {
-        reply: "Sorry, I couldn't process your question right now. Please try again.",
+        reply:
+          "Sorry, I couldn't process your question right now. Please try again.",
       },
-      {
-        status: 500,
-      }
+      { status: 500 }
     );
   }
 }
